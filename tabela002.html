@@ -8,6 +8,10 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
         
         table{
             width: 500px;
@@ -19,7 +23,11 @@
             padding: 10px;
         }
         thead, tfoot{
-            background-color:#ccc;
+            background-color:black;
+            color: white;
+        }
+        .num{
+            text-align: right;
         }
     </style>
     <title>Tabela</title>
@@ -29,37 +37,43 @@
     <table>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td>45.919.049</td>
+                <td class="num">45.919.049</td>
             </tr>
 
             <tr>
                 <td>Minas Gerais</td>
-                <td>21.189.009</td>
+                <td class="num">21.189.009</td>
             </tr>
 
             <tr>
                 <td>Rio de Janeiro</td>
-                <td>17.790.326</td>
+                <td class="num">17.790.326</td>
             </tr>
 
             <tr>
                 <td>Espírito Santo</td>
-                <td>12.961.042</td>
+                <td class="num">3.961.042</td>
+            </tr>
+
+            <tr>
+                <td>Bahia</td>
+
+                <td class="num">13.098.004</td>
             </tr>
         </tbody>
 
         <tfoot>
             <tr>
-                <td>Totalização</td>
-                <td>99.059.427</td>
+                <th scope="row">Totalidade</th>
+                <td class="num">99.859.427</td>
             </tr>
         </tfoot>
     </table>
